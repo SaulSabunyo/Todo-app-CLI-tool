@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "description": "Praying to the Almighty",
+    "status": "completed"
+  },
+  {
+    "id": 2,
+    "description": "Jogging For Fitness",
+    "status": "pending"
+  },
+  {
+    "id": 3,
+    "description": "Showering to Keep clean",
+    "status": "pending"
+  },
+  {
+    "id": 4,
+    "description": "Buy Milk",
+    "status": "pending"
+  },
+  {
+    "id": 5,
+    "description": "Playing Football to improve",
+    "status": "pending"
+  }
+]

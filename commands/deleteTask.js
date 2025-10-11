@@ -1,4 +1,5 @@
-const chalk = require('chalk');
+const _chalk = require('chalk');
+const chalk = _chalk && _chalk.default ? _chalk.default : _chalk;
 const { readTasks, writeTasks } = require('../utils/fileHandler');
 
 function deleteTask(id) {

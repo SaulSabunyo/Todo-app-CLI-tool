@@ -1,25 +1,25 @@
-const fs = require('fs');
-const filePath = './tasks.json';
+const _chalk = require('chalk');
+const chalk = _chalk && _chalk.default ? _chalk.default : _chalk;
+const { readTasks, writeTasks } = require('../utils/fileHandler');
 
-// Read tasks safely
-function readTasks() {
-  try {
-    if (!fs.existsSync(filePath)) fs.writeFileSync(filePath, '[]');
-    const data = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(data || '[]');
-  } catch (err) {
-    console.error("Error reading tasks:", err);
-    return [];
+function addTask(description) {
+  if (!description || !description.trim()) {
+    console.log(chalk.yellow('Cannot add an empty task.'));
+    return;
   }
+
+  const tasks = readTasks();
+  const nextId = tasks.length ? Math.max(...tasks.map(t => t.id)) + 1 : 1;
+
+  const newTask = {
+    id: nextId,
+    description: description.trim(),
+    status: 'pending'
+  };
+
+  tasks.push(newTask);
+  writeTasks(tasks);
+  console.log(chalk.green(`Task added with ID ${nextId}.`));
 }
 
-// Write tasks safely
-function writeTasks(tasks) {
-  try {
-    fs.writeFileSync(filePath, JSON.stringify(tasks, null, 2));
-  } catch (err) {
-    console.error("Error writing tasks:", err);
-  }
-}
-
-module.exports = { readTasks, writeTasks };
+module.exports = addTask;
