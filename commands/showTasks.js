@@ -11,12 +11,12 @@ function showTasks() {
     return;
   }
 
-  const table = new Table({
+  const table = new Table({// Create a table to display tasks
     head: ['ID', 'Description', 'Status'],
     colWidths: [10, 40, 15]
   });
 
-  tasks.forEach(t => {
+  tasks.forEach(t => {// Add each task to the table with colored status
     const statusColor = t.status === 'completed' ? chalk.green : chalk.cyan;
     table.push([t.id, t.description, statusColor(t.status)]);
   });

@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-// Chalk v5 compatibility when using CommonJS `require`
+
 const _chalk = require('chalk');
 const chalk = _chalk && _chalk.default ? _chalk.default : _chalk;
 

@@ -11,8 +11,8 @@ function deleteTask(id) {
     return;
   }
 
-  tasks.splice(index, 1);
-  writeTasks(tasks);
+  tasks.splice(index, 1);// Remove the task from the array
+  writeTasks(tasks);// Save the updated tasks array back to the file
 
   console.log(chalk.green(`Task with ID ${id} has been deleted successfully.`));
 }

@@ -4,11 +4,15 @@
   "description": "A simple CLI To-Do List app built with Node.js",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bin": {
+    "todo": "index.js"
+  },
   "dependencies": {
     "chalk": "^5.6.2",
     "cli-table3": "^0.6.5"
