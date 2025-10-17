@@ -1,4 +1,4 @@
-
+#!/usr/bin/env node
 const _chalk = require('chalk');
 const chalk = _chalk && _chalk.default ? _chalk.default : _chalk;
 
@@ -8,6 +8,8 @@ const deleteTask = require('./commands/deleteTask');
 const updateTask = require('./commands/updateTask');
 
 const [,, command, ...args] = process.argv;
+
+
 
 switch (command) {
   case 'add':
@@ -27,5 +29,5 @@ switch (command) {
     break;
 
   default:
-    console.log(chalk.yellow(`\nInvalid command.\n\nUsage:\n node index.js add "Task description"\n node index.js show\n node index.js delete <id>\n node index.js update <id> <pending|completed>\n`));
+    console.log(chalk.yellow(`\nUsage:\n  todo add "Task description"        Add a new task (status: pending)\n  todo show all                      Show all tasks\n  todo delete <id>                   Delete a task by ID\n  todo update <id> <pending|completed>  Update task status\n\nYou can also run the CLI directly with:\n  node index.js <command>\n`));
 }

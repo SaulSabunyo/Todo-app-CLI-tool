@@ -1,16 +1,23 @@
 {
-  "name": "cli-todo",
+  "name": "@saulsabunyo/todo-cli",
   "version": "1.0.0",
-  "description": "A simple CLI To-Do List app built with Node.js",
+  "description": "A feature-rich CLI To-Do List application with color-coded output and table formatting",
   "main": "index.js",
+  "bin": {
+    "todo": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["cli", "todo", "task-management", "productivity", "command-line"],
+  "author": "Saul Sabunyo",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SaulSabunyo/Todo-app-CLI-tool.git"
+  },
   "dependencies": {
-    "chalk": "^5.6.2",
+    "chalk": "^4.1.2",
     "cli-table3": "^0.6.5"
   }
 }

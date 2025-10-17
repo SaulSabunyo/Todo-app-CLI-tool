@@ -26,7 +26,27 @@
   },
   {
     "id": 6,
-    "description": "Coding",
+    "description": "Praying",
     "status": "pending"
+  },
+  {
+    "id": 7,
+    "description": "Cooking",
+    "status": "pending"
+  },
+  {
+    "id": 8,
+    "description": "Cooking",
+    "status": "pending"
+  },
+  {
+    "id": 9,
+    "description": "Cooking",
+    "status": "pending"
+  },
+  {
+    "id": 10,
+    "description": "Playing Football",
+    "status": "completed"
   }
 ]
