@@ -9,12 +9,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["cli", "todo", "task-management", "productivity", "command-line"],
+  "keywords": [
+    "cli",
+    "todo",
+    "task-management",
+    "productivity",
+    "command-line"
+  ],
   "author": "Saul Sabunyo",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SaulSabunyo/Todo-app-CLI-tool.git"
+    "url": "git+https://github.com/SaulSabunyo/Todo-app-CLI-tool.git"
   },
   "dependencies": {
     "chalk": "^4.1.2",

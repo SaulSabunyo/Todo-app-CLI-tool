@@ -48,5 +48,10 @@
     "id": 10,
     "description": "Playing Football",
     "status": "completed"
+  },
+  {
+    "id": 11,
+    "description": "Test the CLI package",
+    "status": "completed"
   }
 ]
